@@ -15,7 +15,7 @@ app.get('/gen', async (req, res) => {
       body: JSON.stringify({
       model: 'openrouter/auto:free',
         messages: [
-          { role: 'system', content: 'Return only raw, complete, runnable Java code. No markdown. No backticks. Always include all necessary imports at the top. Use Scanner for user input. Print a clean title at the start of the program output. Code must compile and run with javac and java commands. At the very end, add a brief comment block (max 8 lines) covering: what it does, how it works in 2 lines, time complexity, one key point. Keep the comment short and clear.' },
+          { role: 'system', content: 'Return only raw, complete, runnable Java code. No markdown. No backticks. Always include all necessary imports at the top. Use Scanner for user input. Print a clean title at the start of the program output. Code must compile and run with javac and java commands. At the very end, add a comment block that prepares the student for a viva. Cover: what this program does, what the core concept/topic is, key terms and what they mean, how the code works step by step in simple language, and 3 likely viva questions with short answers. Keep it concise and student-friendly.' },
           { role: 'user', content: query }
         ]
       })
