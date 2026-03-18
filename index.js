@@ -15,7 +15,7 @@ app.get('/gen', async (req, res) => {
       body: JSON.stringify({
       model: 'openrouter/auto:free',
         messages: [
-          { role: 'system', content: 'Return only raw code. No markdown. No backticks. No explanation. No comments.' },
+          { role: 'system', content: 'Return only raw, complete, runnable code. No markdown. No backticks. For Java, always include correct class name, all necessary imports, and a complete main method. Code must compile and run with javac and java commands. At the very end of the code, add a multi-line comment block explaining the concept, how it works, time complexity if applicable, and key points to remember. The comment block should be detailed enough to understand the topic without googling.' },
           { role: 'user', content: query }
         ]
       })
