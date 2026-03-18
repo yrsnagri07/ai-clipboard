@@ -13,7 +13,7 @@ app.get('/gen', async (req, res) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        model: 'deepseek/deepseek-coder',
+      model: 'deepseek/deepseek-coder-v2',
         messages: [
           { role: 'system', content: 'Return only raw code. No markdown. No backticks. No explanation. No comments.' },
           { role: 'user', content: query }
