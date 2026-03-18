@@ -22,11 +22,19 @@ app.get('/gen', async (req, res) => {
     });
 
     const data = await response.json();
+    console.log('OpenRouter response:', JSON.stringify(data));
+
+    if (!data.choices || !data.choices[0]) {
+      console.error('Bad response:', JSON.stringify(data));
+      return res.status(500).send('AI error: ' + JSON.stringify(data));
+    }
+
     res.setHeader('Content-Type', 'text/plain');
     res.send(data.choices[0].message.content.trim());
 
   } catch (err) {
-    res.status(500).send('Error generating code');
+    console.error('Error:', err.message);
+    res.status(500).send('Error: ' + err.message);
   }
 });
 
