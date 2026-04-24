@@ -11,6 +11,7 @@ app.get('/gen', async (req, res) => {
       headers: {
         'Authorization': `Bearer ${process.env.OPENROUTER_KEY}`,
         'Content-Type': 'application/json'
+        
       },
       body: JSON.stringify({
       model: 'meta-llama/llama-3.1-8b-instruct',
@@ -40,4 +41,5 @@ app.get('/gen', async (req, res) => {
 
 app.listen(process.env.PORT || 8080, () => {
   console.log('Running on port', process.env.PORT || 3000);
+  console.log('OpenRouter Key:', process.env.OPENROUTER_KEY ? 'Set' : 'Not set');
 });
