@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0c2daf88fe7bf0526e03bf6d18e6512fac4dba26
 # AI Clipboard CLI 🤖
 
 > One terminal command → AI-generated code → straight to your clipboard.
@@ -76,4 +79,7 @@ Pull requests welcome. Open an issue first for major changes.
 ## License
 
 MIT
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0c2daf88fe7bf0526e03bf6d18e6512fac4dba26
